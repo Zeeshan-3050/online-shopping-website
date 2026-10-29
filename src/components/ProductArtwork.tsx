@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Package } from 'lucide-react';
-import { Product } from '../data/shopData';
+import { Product, INITIAL_PRODUCTS } from '../data/shopData';
 
 interface ProductArtworkProps {
   product: Product;
@@ -10,7 +10,14 @@ interface ProductArtworkProps {
 export const ProductArtwork: React.FC<ProductArtworkProps> = ({ product, className = '' }) => {
   const [imgError, setImgError] = useState(false);
 
-  if (imgError || !product.imageUrl) {
+  const canonicalUrl =
+    INITIAL_PRODUCTS.find((p) => p.id === product.id)?.imageUrl || product.imageUrl;
+
+  useEffect(() => {
+    setImgError(false);
+  }, [canonicalUrl]);
+
+  if (imgError || !canonicalUrl) {
     return (
       <div
         className={`flex flex-col items-center justify-center bg-stone-100 dark:bg-zinc-800 text-stone-700 dark:text-zinc-200 p-6 select-none ${className}`}
@@ -29,7 +36,7 @@ export const ProductArtwork: React.FC<ProductArtworkProps> = ({ product, classNa
 
   return (
     <img
-      src={product.imageUrl}
+      src={canonicalUrl}
       alt={product.name}
       referrerPolicy="no-referrer"
       onError={() => setImgError(true)}
@@ -38,3 +45,4 @@ export const ProductArtwork: React.FC<ProductArtworkProps> = ({ product, classNa
     />
   );
 };
+

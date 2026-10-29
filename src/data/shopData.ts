@@ -1,3 +1,22 @@
+import heroDarkGoldHeadphonesImg from '../assets/images/hero_dark_gold_headphones_1793299750909.jpg';
+import bentoEarbudsImg from '../assets/images/product_dark_gold_earbuds_1793299751816.jpg';
+import bentoSpeakerImg from '../assets/images/product_dark_gold_speaker_1793299752526.jpg';
+import studioHeadphonesImg from '../assets/images/product_electronics_anc_headphones_1793297505034.jpg';
+import ultrabookImg from '../assets/images/product_electronics_ultrabook_1793297506608.jpg';
+import smartphoneImg from '../assets/images/product_smartphone_flagship_1793298961319.jpg';
+import overshirtImg from '../assets/images/product_clothing_overshirt_1793297507876.jpg';
+import blazerImg from '../assets/images/product_clothing_blazer_1793302952729.jpg';
+import aerostrideImg from '../assets/images/product_shoes_aerostride_1793298963102.jpg';
+import chelseaBootsImg from '../assets/images/product_shoes_chelsea_boots_1793298965127.jpg';
+import suedeLoafersImg from '../assets/images/product_shoes_suede_loafers_1793302953010.jpg';
+import hardcoverBooksImg from '../assets/images/product_book_hci_hardcover_1793303080000.jpg';
+import espressoMakerImg from '../assets/images/product_home_espresso_maker_1793297508653.jpg';
+import loungeChairImg from '../assets/images/product_home_lounge_chair_1793303077106.jpg';
+import brassLampImg from '../assets/images/product_home_brass_lamp_1793302950163.jpg';
+import chronosWatchImg from '../assets/images/product_watch_chronos_1793298963281.jpg';
+import leatherBriefcaseImg from '../assets/images/product_bag_leather_briefcase_1793298965742.jpg';
+import sunglassesImg from '../assets/images/product_acc_sunglasses_1793302947950.jpg';
+
 export interface ProductReview {
   id: string;
   author: string;
@@ -38,10 +57,10 @@ export interface CategoryNode {
   featuredOffer: string;
 }
 
-export const HERO_BANNER_IMAGE = '/src/assets/images/hero_dark_gold_headphones_1793299750909.jpg';
-export const BENTO_EARBUDS_IMAGE = '/src/assets/images/product_dark_gold_earbuds_1793299751816.jpg';
-export const BENTO_SPEAKER_IMAGE = '/src/assets/images/product_dark_gold_speaker_1793299752526.jpg';
-export const STUDIO_HEADPHONES_IMAGE = '/src/assets/images/product_electronics_anc_headphones_1793297505034.jpg';
+export const HERO_BANNER_IMAGE = heroDarkGoldHeadphonesImg;
+export const BENTO_EARBUDS_IMAGE = bentoEarbudsImg;
+export const BENTO_SPEAKER_IMAGE = bentoSpeakerImg;
+export const STUDIO_HEADPHONES_IMAGE = studioHeadphonesImg;
 
 
 export const CATEGORY_TREE: CategoryNode[] = [
@@ -178,7 +197,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_electronics_anc_headphones_1793297505034.jpg',
+    imageUrl: studioHeadphonesImg,
     accentColor: '#71717a',
     svgType: 'earbuds',
     specs: {
@@ -223,7 +242,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     stock: 5,
     isFeatured: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_electronics_ultrabook_1793297506608.jpg',
+    imageUrl: ultrabookImg,
     accentColor: '#52525b',
     svgType: 'phone',
     specs: {
@@ -261,7 +280,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isBestSeller: true,
     isNewArrival: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_smartphone_flagship_1793298961319.jpg',
+    imageUrl: smartphoneImg,
     accentColor: '#0284c7',
     svgType: 'phone',
     specs: {
@@ -296,7 +315,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     stock: 22,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_dark_gold_earbuds_1793299751816.jpg',
+    imageUrl: bentoEarbudsImg,
     accentColor: '#cba365',
     svgType: 'earbuds',
     specs: {
@@ -323,7 +342,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_clothing_overshirt_1793297507876.jpg',
+    imageUrl: overshirtImg,
     accentColor: '#4d5d43',
     svgType: 'kurta',
     specs: {
@@ -356,7 +375,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Textured winter karandi two-piece ensemble featuring tonal geometric thread embroidery on the neckline and cuffs.',
     stock: 9,
     isNewArrival: true,
-    imageUrl: createStudioSvgDataUri('Handloom Karandi Kurta', '2-Piece Pret · Tonal Embroidery', '#faf8f5', '#9a3412', 'kurta'),
+    imageUrl: overshirtImg,
     accentColor: '#9a3412',
     svgType: 'kurta',
     specs: {
@@ -379,7 +398,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Unlined breathable flax-linen and viscose tailored blazer with peak lapels and horn buttons for year-round formal styling.',
     stock: 3, // Low stock
     isDiscounted: true,
-    imageUrl: createStudioSvgDataUri('Structured Linen Blazer', 'Tailored Fit · Breathable Flax Blend', '#f5f5f4', '#44403c', 'blazer'),
+    imageUrl: blazerImg,
     accentColor: '#44403c',
     svgType: 'blazer',
     specs: {
@@ -401,7 +420,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'High-twist 290gsm peached cotton chinos with single front pleats, bar-tacked stress points, and YKK brass zip fly.',
     stock: 25,
     isBestSeller: true,
-    imageUrl: createStudioSvgDataUri('Selvedge Pleated Chinos', '290 GSM Peached Cotton · Tapered', '#f5f5f4', '#78350f', 'kurta'),
+    imageUrl: blazerImg,
     accentColor: '#78350f',
     svgType: 'kurta',
     specs: {
@@ -428,7 +447,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_shoes_aerostride_1793298963102.jpg',
+    imageUrl: aerostrideImg,
     accentColor: '#ea580c',
     svgType: 'loafer',
     specs: {
@@ -453,7 +472,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isNewArrival: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_shoes_chelsea_boots_1793298965127.jpg',
+    imageUrl: chelseaBootsImg,
     accentColor: '#7c2d12',
     svgType: 'loafer',
     specs: {
@@ -476,7 +495,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Water-repellent Italian split suede slip-on loafers engineered for zero break-in comfort during long campus or office days.',
     stock: 18,
     isDiscounted: true,
-    imageUrl: createStudioSvgDataUri('Italian Suede Loafers', 'Water-Repellent · Zero Break-In', '#faf8f5', '#854d0e', 'loafer'),
+    imageUrl: suedeLoafersImg,
     accentColor: '#854d0e',
     svgType: 'loafer',
     specs: {
@@ -503,7 +522,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: createStudioSvgDataUri('HCI Interface Architecture', '5th Edition Hardcover · 640 Pages', '#f5f5f4', '#1e3a8a', 'book'),
+    imageUrl: hardcoverBooksImg,
     accentColor: '#1e3a8a',
     svgType: 'book',
     specs: {
@@ -536,7 +555,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'A practical deep-dive into mental models, affordances, Fitts’s Law target sizing (44x44px), and error-tolerant form design.',
     stock: 19,
     isNewArrival: true,
-    imageUrl: createStudioSvgDataUri('Cognitive Ergonomics', 'Affordances · Fitts Law · Usability', '#faf8f5', '#b45309', 'book'),
+    imageUrl: hardcoverBooksImg,
     accentColor: '#b45309',
     svgType: 'book',
     specs: {
@@ -557,7 +576,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     subcategory: 'Software Engineering',
     description: 'Master state management, semantic HTML5, accessible ARIA patterns, responsive CSS grid systems, and deterministic UI architecture.',
     stock: 14,
-    imageUrl: createStudioSvgDataUri('Clean Frontend Engineering', 'HTML5 · CSS3 · Accessible DOM Patterns', '#f4f4f5', '#065f46', 'book'),
+    imageUrl: hardcoverBooksImg,
     accentColor: '#065f46',
     svgType: 'book',
     specs: {
@@ -584,7 +603,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_home_espresso_maker_1793297508653.jpg',
+    imageUrl: espressoMakerImg,
     accentColor: '#57534e',
     svgType: 'lamp',
     specs: {
@@ -617,7 +636,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Kiln-dried solid ashwood frame with mortise-and-tenon joinery and high-resilience ivory bouclé upholstery.',
     stock: 2, // Low stock to trigger Warning Dialog!
     isNewArrival: true,
-    imageUrl: createStudioSvgDataUri('Nordic Ashwood Lounge Chair', 'Mortise Joinery · Ivory Boucle', '#faf8f5', '#78350f', 'chair'),
+    imageUrl: loungeChairImg,
     accentColor: '#78350f',
     svgType: 'chair',
     specs: {
@@ -640,7 +659,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Cordless spun-brass architectural dome lamp with stepless warm-to-daylight touch dimming (2700K–4500K) and 30-hour battery.',
     stock: 15,
     isDiscounted: true,
-    imageUrl: createStudioSvgDataUri('Bauhaus Brass Desk Lamp', '2700K-4500K Touch Dimmer · Cordless', '#faf8f5', '#d97706', 'lamp'),
+    imageUrl: brassLampImg,
     accentColor: '#d97706',
     svgType: 'lamp',
     specs: {
@@ -667,7 +686,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isBestSeller: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_watch_chronos_1793298963281.jpg',
+    imageUrl: chronosWatchImg,
     accentColor: '#b45309',
     svgType: 'sunglasses',
     specs: {
@@ -693,7 +712,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     isFeatured: true,
     isNewArrival: true,
     isDiscounted: true,
-    imageUrl: '/src/assets/images/product_bag_leather_briefcase_1793298965742.jpg',
+    imageUrl: leatherBriefcaseImg,
     accentColor: '#92400e',
     svgType: 'sunglasses',
     specs: {
@@ -716,7 +735,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     description: 'Hand-polished Mazzucchelli cellulose acetate frames with Carl Zeiss CR-39 polarized lenses and 5-barrel German hinges.',
     stock: 20,
     isDiscounted: true,
-    imageUrl: createStudioSvgDataUri('Acetate Polarized UV400', 'Mazzucchelli Frame · Zeiss Lenses', '#f4f4f5', '#3f3f46', 'sunglasses'),
+    imageUrl: sunglassesImg,
     accentColor: '#3f3f46',
     svgType: 'sunglasses',
     specs: {

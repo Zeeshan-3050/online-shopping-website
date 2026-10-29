@@ -63,6 +63,7 @@ import {
   ModelessComparisonDialog
 } from './components/DialogsAndMenus';
 import { CheckoutWizardModal, CartItem } from './components/CheckoutWizardModal';
+import { ShoppingFormsSection } from './components/ShoppingFormsSection';
 import { downloadStandaloneBundleFile } from './utils/exportStandaloneBundle';
 
 const STORAGE_KEYS = {
@@ -1102,11 +1103,10 @@ export default function App() {
             </a>
 
             <a
-              href="#section-shop-catalog"
-              onClick={() => setCollectionFilter('new')}
-              className="hover:text-[#CBA365] transition-colors whitespace-nowrap shrink-0"
+              href="#section-shopping-forms"
+              className="text-[#CBA365] hover:underline font-semibold transition-colors whitespace-nowrap shrink-0"
             >
-              New Arrivals
+              Shopping Forms
             </a>
           </nav>
 
@@ -2662,6 +2662,38 @@ export default function App() {
             SECTION 9: 4-COLUMN SHIELD TRUST BAR & "STAY IN TUNE" NEWSLETTER
                (Exact Bottom Layout from Reference Pin)
            ==================================================================== */}
+        <ShoppingFormsSection
+          products={products}
+          currentUser={currentUser}
+          onSuccessAuth={(user) => {
+            setCurrentUser(user);
+            triggerToast(`Welcome to TuRi 30 Shop, ${user.name}!`);
+          }}
+          onAddReview={handleAddReview}
+          onAskConfirmReset={(formTitle, confirmCb) =>
+            setSystemDialog({
+              isOpen: true,
+              type: 'confirm',
+              title: `Reset ${formTitle}?`,
+              message: `Are you sure you want to clear all entered fields in the ${formTitle}?`,
+              confirmLabel: 'Yes, Clear Fields',
+              cancelLabel: 'Keep Editing',
+              onConfirm: () => {
+                confirmCb();
+                triggerToast(`${formTitle} reset.`);
+              }
+            })
+          }
+          onTriggerMessageDialog={(title, message) =>
+            setSystemDialog({
+              isOpen: true,
+              type: 'message',
+              title,
+              message
+            })
+          }
+        />
+
         <section id="section-contact" className="space-y-8 pt-4">
           {/* 4-Column Trust Strip with Vertical Hairline Dividers */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-stone-200 dark:divide-zinc-800/90 py-4 border-y border-stone-200 dark:border-zinc-800/90">
@@ -2787,6 +2819,9 @@ export default function App() {
             <a href="#section-shop-catalog" className="hover:text-[#CBA365]">
               Shop Catalog
             </a>
+            <a href="#section-shopping-forms" className="hover:text-[#CBA365]">
+              Shopping Forms
+            </a>
             <a href="#section-bestsellers" className="hover:text-[#CBA365]">
               Best Sellers
             </a>
@@ -2849,6 +2884,7 @@ export default function App() {
                   { label: 'Best Sellers', filter: 'bestsellers' as const, target: '#section-bestsellers' },
                   { label: 'New Arrivals', filter: 'new' as const, target: '#section-shop-catalog' },
                   { label: 'Special Offers', filter: 'offers' as const, target: '#section-shop-catalog' },
+                  { label: 'Shopping Forms Hub', filter: 'all' as const, target: '#section-shopping-forms' },
                   { label: 'Stay in Tune & Contact', filter: 'all' as const, target: '#section-contact' }
                 ].map((navItem) => (
                   <a
