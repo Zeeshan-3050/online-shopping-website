@@ -1,0 +1,6 @@
+{
+  "name": "TuRi 30 Shop — Online Shopping & HCI Interface Showcase",
+  "description": "A complete, responsive online shopping website demonstrating all Human-Computer Interaction (HCI) interface design elements including 10 menu types, 6 dialog box types, tree/pagination/wizard navigation, accessible forms, and usability principles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
